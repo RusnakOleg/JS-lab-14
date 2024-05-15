@@ -20,3 +20,20 @@ function checkEmail(email) {
 
 console.log(checkEmail("Qmail2@gmail.com")); 
 
+// task 3
+function findPattern(str) {
+
+    const regex = /d(b+)d/gi;
+    const matches = [];
+    let match;
+
+    while ((match = regex.exec(str)) !== null) {
+        matches.push(match[0]);  
+        matches.push(match[1]);  
+        matches.push('d');      
+    }
+    return matches;
+}
+
+console.log(findPattern("cdbBdbsbz")); 
+
