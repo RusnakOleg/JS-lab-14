@@ -11,3 +11,12 @@ function upperCase(str) {
 upperCase('regexp');
 upperCase('RegExp'); 
 
+//task 2
+function checkEmail(email) {
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+console.log(checkEmail("Qmail2@gmail.com")); 
+
