@@ -71,3 +71,25 @@ console.log(checkEmail_('my_mail@gmail.com'));
 console.log(checkEmail_('#my_mail@gmail.com')); 
 console.log(checkEmail_('my_ma--il@gmail.com')); 
 
+// task 7
+function checkLogin(login) {
+
+    const loginRegex = /^[a-zA-Z][a-zA-Z0-9.]{1,9}$/;
+    const numberRegex = /[0-9]*\.?[0-9]+/g;
+    const isValidLogin = loginRegex.test(login);
+    const numbers = login.match(numberRegex) || [];
+
+    return {
+        isValidLogin: isValidLogin,
+        numbers: numbers
+    };
+}
+
+let result1 = checkLogin('ee1.1ret3');
+console.log(result1.isValidLogin); 
+console.log(result1.numbers); 
+
+let result2 = checkLogin('ee1*1ret3');
+console.log(result2.isValidLogin); 
+console.log(result2.numbers); 
+
