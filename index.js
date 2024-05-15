@@ -55,3 +55,19 @@ function validateCreditCard(cardNumber) {
 
 console.log(validateCreditCard("9999-9999-9999-9999"));
 
+// task 6
+function checkEmail_(email) {
+
+    const emailRegex = /^[a-zA-Z0-9]+([-_][a-zA-Z0-9]+)*@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/;
+    
+    if (emailRegex.test(email)) {
+        return "Email is correct!";
+    } else {
+        return "Email is not correct!";
+    }
+}
+
+console.log(checkEmail_('my_mail@gmail.com')); 
+console.log(checkEmail_('#my_mail@gmail.com')); 
+console.log(checkEmail_('my_ma--il@gmail.com')); 
+
