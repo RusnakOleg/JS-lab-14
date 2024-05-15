@@ -37,3 +37,12 @@ function findPattern(str) {
 
 console.log(findPattern("cdbBdbsbz")); 
 
+// task 4
+function swapSubstrings(str) {
+
+    const regex = /^(\w+)\s+(\w+)$/;
+    return str.replace(regex, '$2, $1');
+}
+
+console.log(swapSubstrings("Java Script")); 
+
