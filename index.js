@@ -46,3 +46,12 @@ function swapSubstrings(str) {
 
 console.log(swapSubstrings("Java Script")); 
 
+// task 5
+function validateCreditCard(cardNumber) {
+
+    const cardRegex = /^(\d{4}-){3}\d{4}$/;
+    return cardRegex.test(cardNumber);
+}
+
+console.log(validateCreditCard("9999-9999-9999-9999"));
+
